@@ -55,17 +55,6 @@ mkdir -p $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 mkdir -p $RPM_BUILD_ROOT/var/lib/linpopup
 #menu
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat << EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}): \
-command="%{_bindir}/%{name}" \
-icon="%{name}.png" \
-needs="X11" \
-section="Internet/Instant Messaging" \
-title="LinPopUp" \
-longtitle="A Linux enhanced port of winpopup" \
-xdg="true"
-EOF
 
 mkdir -p %{buildroot}%{_datadir}/applications
 cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
@@ -110,7 +99,6 @@ else :; fi;
 %{_mandir}/man1/LinPopUp.1*
 %{_mandir}/man1/linpopup.1*
 %{_datadir}/%{name}
-%{_menudir}/%{name}
 %{_datadir}/applications/mandriva-%{name}.desktop
 %{_miconsdir}/%{name}.png
 %{_iconsdir}/%{name}.png
