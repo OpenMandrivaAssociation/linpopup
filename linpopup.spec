@@ -46,7 +46,7 @@ for i in `find . -maxdepth 1 -type l`;do j=`readlink $i`;rm -f $i; cp $j $i;done
 
 %build
 %configure
-%make DATA_DIR=%{_localstatedir}/%{name} DATA_FILE=%{_localstatedir}/%{name}/messages.dat
+%make DATA_DIR=%{_localstatedir}/lib/%{name} DATA_FILE=%{_localstatedir}/lib/%{name}/messages.dat
 
 %install
 rm -rf $RPM_BUILD_ROOT
