@@ -86,10 +86,14 @@ if [ ! -f /var/lib/linpopup/messages.dat ]; then
     chmod 0666 /var/lib/linpopup/messages.dat;
     chgrp nobody /var/lib/linpopup/messages.dat;
 else :; fi;  
+%if %mdkversion < 200900
 %{update_menus}
+%endif
 
+%if %mdkversion < 200900
 %postun
 %{clean_menus}
+%endif
 
 %files -f %{name}.lang
 %defattr(-,root,root)
