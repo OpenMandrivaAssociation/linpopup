@@ -1,6 +1,6 @@
 %define name linpopup
 %define version 2.0.7
-%define release %mkrel 2
+%define release %mkrel 4
 %define prefix %_prefix
 
 Summary: Linux enhanced port of winpopup
