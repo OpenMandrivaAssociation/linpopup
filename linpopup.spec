@@ -14,7 +14,7 @@ Source1: %{name}-16x16.png.bz2
 Source2: %{name}-32x32.png.bz2
 Source3: %{name}-48x48.png.bz2
 #Patch:	 linpopup-2.0.1-fix-makefile.patch.bz2
-URL:	http://linpopup2.sourceforge.net/
+URL:	https://linpopup2.sourceforge.net/
 Prefix: %prefix
 BuildRoot: %{_tmppath}/%{name}-buildroot
 Requires: samba-client
