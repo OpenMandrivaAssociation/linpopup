@@ -18,6 +18,9 @@ URL:	https://linpopup2.sourceforge.net/
 Prefix: %prefix
 BuildRoot: %{_tmppath}/%{name}-buildroot
 Requires: samba-client
+BuildRequires:	autoconf
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires: gtk2-devel automake libxmu-devel
 Provides: LinPopUp = %{version}-%{release}
 Obsoletes: LinPopUp
